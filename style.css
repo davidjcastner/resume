@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --color-body: #808080;
+    --color-background: #ffffff;
+    --color-text-default: #333333;
+    --color-text-info: #525252;
+    --color-text-faded: #929292;
+    --color-text-primary: #334a94;
+    --color-text-accent: #5973c9;
+}
+
+html {
+    background-color: var(--color-body);
+    color: var(--color-text-default);
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+.resume-container {
+    width: 8.5in;
+    height: 11in;
+    margin: 0;
+    padding: 0.5in;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@page {
+    size: 8.5in 11in;
+    margin: 0;
+}
+
+#logo {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.25in;
+}
+
+
+/* headers and paragraph */
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    display: inline-block;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-primary);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+h1, h2, h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+h4 {
+    letter-spacing: 0.05rem;
+}
+
+p, li {
+    font-size: 0.875rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* custom text */
+
+#subtitle {
+    color: var(--color-text-faded);
+    font-size: 1.75rem;
+}
+
+#technical-skills {
+    color: var(--color-text-primary);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.position-info {
+    color: var(--color-text-info);
+    font-style: italic;
+}
+
+.position-title {
+    color: var(--color-text-default);
+    font-weight: 500;
+}
+
+/* lists */
+
+ul {
+    margin: 0;
+    padding-left: 0.25in;
+}
+
+li {
+    line-height: 1.4;
+    font-size: 0.75rem;
+}
+
+/* links */
+
+a {
+    color: var(--color-text-accent);
+    /* text-decoration: none; */
+}
+
+/* ignore visited decoration */
+a:visited {
+    color: var(--color-text-accent);
+}
+
+/* a.link-tel {
+    text-decoration: none;
+} */
