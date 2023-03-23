@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap'); */
 
 :root {
     --color-body: #808080;
@@ -8,6 +9,7 @@
     --color-text-faded: #929292;
     --color-text-primary: #334a94;
     --color-text-accent: #5973c9;
+    --color-text-hover: #62b1d6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,14 +28,17 @@
 html {
     background-color: var(--color-body);
     color: var(--color-text-default);
+    /* font-family: 'Raleway', arial, sans-serif; */
     font-family: 'Roboto', arial, sans-serif;
 }
+
+/* layout */
 
 .resume-container {
     width: 8.5in;
     height: 11in;
     margin: 0;
-    padding: 0.5in;
+    padding: 0.3in 0.5in;
     background-color: var(--color-background);
     display: flex;
     flex-direction: column;
@@ -45,9 +50,10 @@ html {
     margin: 0;
 }
 
-#logo {
-    width: 2.5rem;
-    height: 2.5rem;
+.section-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1ch;
 }
 
 .col-divider {
@@ -55,13 +61,6 @@ html {
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.25in;
 }
-/* .col-divider {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.25in;
-} */
 
 
 /* headers and paragraph */
@@ -69,14 +68,14 @@ html {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     display: inline-block;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--color-text-primary);
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.25;
+    line-height: 1.1;
 }
 
 h1, h2, h3 {
@@ -105,6 +104,7 @@ h1 {
 #subtitle {
     color: var(--color-text-faded);
     font-size: 1.75rem;
+    font-weight: 500;
 }
 
 #technical-skills {
@@ -147,7 +147,9 @@ li {
 
 a {
     color: var(--color-text-accent);
-    /* text-decoration: none; */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
 }
 
 /* ignore visited decoration */
@@ -155,6 +157,25 @@ a:visited {
     color: var(--color-text-accent);
 }
 
-/* a.link-tel {
-    text-decoration: none;
-} */
+a:hover {
+    color: var(--color-text-hover);
+}
+
+/* logo */
+svg.logo {
+    --stroke-width: calc(1rem * 5 / 16);
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+svg.logo polygon {
+    fill: none;
+    stroke: var(--color-text-primary);
+    stroke-width: var(--stroke-width);
+}
+
+svg.logo line {
+    stroke: var(--color-text-primary);
+    stroke-linecap: butt;
+    stroke-width: var(--stroke-width);
+}
