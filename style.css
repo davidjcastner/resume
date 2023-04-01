@@ -10,6 +10,11 @@
     --color-text-primary: #334a94;
     --color-text-accent: #5973c9;
     --color-text-hover: #62b1d6;
+    --color-bg-hex-0: #efefef;
+    --color-bg-hex-1: #d9ddeb;
+
+    --layer-resume-background: 1;
+    --layer-resume-content: 2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,15 +38,38 @@ html {
 
 /* layout */
 
+body {
+    /* padding: 0.5in; */
+}
+
 .resume-container {
+    margin: 0 auto;
+    position: relative;
     width: 8.5in;
     height: 11in;
+    background-color: var(--color-background);
+}
+
+.resume-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--layer-resume-background);
+    background-color: var(--color-background);
+}
+
+.resume-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0.3in 0.5in;
-    background-color: var(--color-background);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: var(--layer-resume-content);
 }
 
 @page {
@@ -176,4 +204,24 @@ svg.logo line {
     stroke: var(--color-text-primary);
     stroke-linecap: butt;
     stroke-width: var(--stroke-width);
+}
+
+/* bg-design */
+
+svg.bg-design {
+    width: 100%;
+    height: 100%;
+}
+
+svg.bg-design polygon {
+    stroke-width: 0.25rem;
+    stroke: var(--color-background);
+}
+
+svg.bg-design polygon.hexagon-0 {
+    fill: var(--color-bg-hex-0);
+}
+
+svg.bg-design polygon.hexagon-1 {
+    fill: var(--color-bg-hex-1);
 }
