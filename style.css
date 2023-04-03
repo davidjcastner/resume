@@ -17,19 +17,6 @@
     --layer-resume-content: 2;
 }
 
-@media (prefers-color-scheme: dark) {
-    /* needs work */
-    /* :root {
-        --color-body: #333333;
-        --color-background: #323336;
-        --color-text-default: #d4d4d4;
-        --color-text-info: #b3b3b3;
-        --color-text-faded: #415bb3;
-        --color-text-primary: #9db4ff;
-        --color-text-accent: #5b77d1;
-    } */
-}
-
 html {
     background-color: var(--color-body);
     color: var(--color-text-default);
@@ -38,16 +25,13 @@ html {
 
 /* layout */
 
-body {
-    /* padding: 0.5in; */
-}
-
 .resume-container {
-    margin: 0 auto;
+    margin: auto;
     position: relative;
     width: 8.5in;
     height: 11in;
     background-color: var(--color-background);
+    overflow: hidden;
 }
 
 .resume-background {
